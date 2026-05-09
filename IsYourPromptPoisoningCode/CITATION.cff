@@ -1,0 +1,53 @@
+cff-version: 1.2.0
+message: "If you use this dataset or code, please cite the following paper."
+title: "Is Your Prompt Poisoning Code? Defect Induction Rates and Security Mitigation Strategies"
+type: dataset
+authors:
+  - family-names: Wang
+    given-names: Bin
+  - family-names: Zhong
+    given-names: YiLu
+  - family-names: Wan
+    given-names: MiDi
+  - family-names: Yu
+    given-names: WenJie
+  - family-names: Ouyang
+    given-names: YuanBing
+  - family-names: Huang
+    given-names: Yenan
+  - family-names: Li
+    given-names: Hui
+keywords:
+  - large language models
+  - code generation
+  - software security
+  - CWE
+  - prompt engineering
+  - empirical software engineering
+identifiers:
+  - type: other
+    value: "arXiv:2510.22944"
+    description: "arXiv preprint"
+url: "https://arxiv.org/abs/2510.22944"
+preferred-citation:
+  type: article
+  title: "Is Your Prompt Poisoning Code? Defect Induction Rates and Security Mitigation Strategies"
+  authors:
+    - family-names: Wang
+      given-names: Bin
+    - family-names: Zhong
+      given-names: YiLu
+    - family-names: Wan
+      given-names: MiDi
+    - family-names: Yu
+      given-names: WenJie
+    - family-names: Ouyang
+      given-names: YuanBing
+    - family-names: Huang
+      given-names: Yenan
+    - family-names: Li
+      given-names: Hui
+  journal: "Empirical Software Engineering"
+  year: 2025
+  notes: "To appear"
+  url: "https://arxiv.org/abs/2510.22944"

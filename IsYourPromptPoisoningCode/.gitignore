@@ -1,0 +1,31 @@
+# --------------------------------------------------------------------------
+# Open-source repository scope
+#
+# This repository publishes only the dataset (`DataSet/`) and the experiment
+# runners (`experimental_code/`). Raw experimental outputs and rendered
+# figures from the paper are NOT redistributed via GitHub — they are kept
+# locally and (optionally) in private archives.
+# --------------------------------------------------------------------------
+
+# Local-only artifacts that must never be committed
+Experimental data/
+Picture/
+Picture Code/
+
+# Local env / secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# OS / editor noise
+.DS_Store
+.idea/
+.vscode/
+*.swp
