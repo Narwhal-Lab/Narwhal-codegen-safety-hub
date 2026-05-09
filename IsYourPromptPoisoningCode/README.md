@@ -3,9 +3,11 @@
 This repository accompanies the paper:
 
 > **Is Your Prompt Poisoning Code? Defect Induction Rates and Security Mitigation Strategies**
-> Bin Wang, YiLu Zhong, MiDi Wan, WenJie Yu, YuanBing Ouyang, Yenan Huang, Hui Li
+> Bin Wang, YiLu Zhong, MiDi Wan, WenJie Yu, YuanBing Ouyang, Yenan Huang, Hui Li†
 > *Empirical Software Engineering* (accepted)
 > arXiv: [2510.22944](https://arxiv.org/abs/2510.22944)
+>
+> † Corresponding author: Hui Li
 
 It contains the **CWE-BENCH-PYTHON** dataset and the experiment runners used to measure how prompt normativity affects the security of LLM-generated code, together with the runners for the Chain-of-Thought, ReAct, and synonym-perturbation variants reported in the paper.
 
