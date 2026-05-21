@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![License: CC-BY-4.0](https://img.shields.io/badge/Data-CC--BY--4.0-green.svg)](LICENSE-DATA)
 
-Implementation and evaluation for the paper *"Learn from Your Mistakes:
+Implementation for the paper *"Learn from Your Mistakes:
 Tree-like Self-Play for Secure Code LLMs"*.
 
 ## Abstract
@@ -18,17 +18,6 @@ While Large Language Models (LLMs) have demonstrated remarkable performance in c
 | `experimental_code/step1_inference/` | vLLM code generation at CWE risk nodes |
 | `experimental_code/step2_data_processing/` | DPO preference pair creation and format conversion |
 | `experimental_code/step3_training/` | DPO training via LLaMA-Factory |
-| `experimental_code/evaluation/rq1_securityeval/` | RQ1 evaluation: SecurityEval benchmark + CodeQL analysis |
-| `experimental_code/evaluation/rq1_cweeval/` | RQ1 evaluation: CWE_Eval benchmark + LLM evaluation |
-| `experimental_code/evaluation/rq2_generalization/` | RQ2 evaluation: Generalization to unseen CWE types |
-| `experimental_code/evaluation/rq3_ablation/` | RQ3 evaluation: Ablation study and cross-language transfer |
-
-## Key Results
-
-- **Security Pass Rate (SPR@1)**: CodeLlama-7B improved to **75.8%** (vs. 57.0% for SFT)
-- **Unseen CWE Generalization**: **32% reduction** in vulnerabilities on novel CWE types
-- **Cross-Lingual Transfer**: Security knowledge transfers from C/C++ to Python, JavaScript, Go, and Ruby
-- **Minimal Coding Impact**: Negligible effect on general-purpose coding ability (HumanEval)
 
 ## Quick Start
 
@@ -38,7 +27,6 @@ While Large Language Models (LLMs) have demonstrated remarkable performance in c
 - CUDA-compatible GPU with at least 24GB VRAM (for 7B models)
 - [vLLM](https://github.com/vllm-project/vllm) for inference
 - [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) for DPO training
-- [CodeQL](https://codeql.github.com/) (for RQ1 SecurityEval evaluation)
 
 ### Installation
 
@@ -61,7 +49,7 @@ cp .env.example .env
 
 ### Running the TSP Pipeline
 
-The TSP pipeline consists of three steps:
+The TSP pipeline consists of four steps:
 
 **Step 0 -- CWE Risk Node Annotation** (requires GPT-4o API access):
 
@@ -87,28 +75,6 @@ bash tsp_pipeline.sh \
     -m CodeLlama-7b-Instruct-hf
 ```
 
-### Reproducing Evaluation Experiments
-
-Each RQ evaluation directory contains an `inference/run_inference.sh` script:
-
-```bash
-# RQ1: SecurityEval + CodeQL
-cd evaluation/rq1_securityeval/inference
-MODEL_NAME=codellama7b_tsp bash run_inference.sh
-
-# RQ1: CWE_Eval + LLM evaluation
-cd evaluation/rq1_cweeval/inference
-MODEL_NAME=codellama7b_tsp bash run_inference.sh
-
-# RQ2: Unseen CWE generalization
-cd evaluation/rq2_generalization/inference
-MODEL_NAME=codellama7b_tsp bash run_inference.sh
-
-# RQ3: Ablation / cross-language
-cd evaluation/rq3_ablation/inference
-MODEL_NAME=codellama7b_tsp bash run_inference.sh
-```
-
 ### Supported Models
 
 | Model | Config File |
@@ -121,8 +87,6 @@ MODEL_NAME=codellama7b_tsp bash run_inference.sh
 | Variable | Description |
 |----------|-------------|
 | `OPENAI_API_KEY` | API key for GPT-4o annotation (Step 0) |
-| `LLM_EVAL_API_KEY` | API key for LLM-based vulnerability evaluation |
-| `LLM_EVAL_API_URL` | API URL for LLM-based vulnerability evaluation |
 | `LLAMA_FACTORY_DIR` | Path to LLaMA-Factory installation |
 | `TSP_MODEL_PATH` | Override default model path |
 
