@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: "Learn from Your Mistakes: Tree-like Self-Play for Secure Code LLMs"
+message: "If you use this software, please cite our paper."
+type: software
+authors:
+  - given-names: [Author First]
+    family-names: [Author Last]
+  - given-names: [Author First]
+    family-names: [Author Last]
+  - given-names: [Author First]
+    family-names: [Author Last]
+  - given-names: [Author First]
+    family-names: [Author Last]
+  - given-names: [Author First]
+    family-names: [Author Last]
+  - given-names: [Author First]
+    family-names: [Author Last]
+  - given-names: [Author First]
+    family-names: [Author Last]
+  - given-names: [Author First]
+    family-names: [Author Last]
+  - given-names: [Author First]
+    family-names: [Author Last]

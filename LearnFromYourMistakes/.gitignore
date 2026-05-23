@@ -1,0 +1,51 @@
+# ============================
+# OS files
+# ============================
+.DS_Store
+.Rhistory
+.RData
+.Rapp.history
+Thumbs.db
+Desktop.ini
+
+# ============================
+# Python
+# ============================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# ============================
+# Virtual environment
+# ============================
+.venv/
+venv/
+env/
+ENV/
+
+# ============================
+# IDE / Editor
+# ============================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.claude/
+
+# ============================
+# API keys / credentials
+# ============================
+.env
+
+# ============================
+# Logs, caches
+# ============================
+*.log
+.cache/
